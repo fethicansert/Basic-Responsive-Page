@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero-text{  
+    width: 55%;
+  
+}
+
+.hero-img{
+    align-self:flex-start;
+    width: 41%;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.header-section{
+    background: #213E4B;
+    padding: 4rem 4rem;
+} 
+
+.header-container{
+    justify-content: space-between;
+    width: 60%;
+    margin: 0 auto;
+    color: white; 
+    max-width: 1400px;
+    display: flex;
+}
+
+.hero-text > p {
+    font-size: 1.2rem;
+    margin: 3rem 0;
+    
+}
+
+.hero-text > h1{
+    font-size: 2rem;
+    
+}
+
+.header-container-button{
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 0.7rem 1.5rem;
+    border-radius: 20px;
+    background: #77C1D8;
+    text-transform: uppercase;
+    color: #213E4B;
+    border: none;
+}
+
+.main-section{
+  
+    padding: 2rem 4rem;
+}
+
+.main-row{
+    max-width: 1400px;
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+.col-left{
+    padding: 2rem 0;
+    align-self: flex-start;
+    width: 60%;
+}
+
+.col-left > h2{
+    font-size: 1.6rem;
+    color: #0B6374;
+}
+
+.col-left > p {
+    font-size: 1.1rem;
+    margin: 2em 0;
+}
+
+.col-right{
+    padding: 2rem 0.5rem;
+    width:35%;
+    margin-left: 5%;
+    background: #0B6374;
+    text-align: center;
+    color: white;
+}
+
+.col-right p{
+    margin: 2rem 0;
+}
+
+header{
+    background: #0B6374;;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 1.5rem 4rem;
+}
+
+.container{
+    position: relative;
+    margin: 0 auto;
+    width: 60%;
+    max-width: 1400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+}
+
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    /* border: 2px solid red; */
+    text-align: center;
+}
+.nav_list-center{
+    margin: 0 auto;
+}
+
+.nav_list{
+    list-style: none;
+    display: flex;
+    /* border: 2px solid green; */
+}
+
+
+.logo{
+    /* border: 2px solid yellow; */
+    font-size: 2.1rem;
+    color: white;
+   
+}
+
+/* Bir onceki kardesi .nav_item ise bunlari yap.... */
+.nav_item + .nav_item{
+    margin-left: 1rem;
+}
+
+
+.nav_link{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: white;
+}
+
+.nav_link--button{
+    background: white;
+    color: #0B6374;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+}
+
+.burger{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: none;
+    background:#213E4B;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.3rem 0.3rem;
+    cursor: pointer;
+}
+
+.burger span{
+    display: block;
+    width: 70%;
+    height: 1px;
+    background: #FFF;
+}
+
+
+@media (max-width: 950px){
+    .header-container,
+    .main-row,
+    .container{
+        width: 90%;
+    }
+    .container{
+        justify-content: center;
+    }
+
+    .header-container,
+    .main-row{
+        flex-direction: column;
+    }
+
+    .header-container{
+        gap: 2rem;
+    }
+    
+    .hero-text,
+    .hero-img,
+    .cont{  
+        width: 100%;   
+    }
+
+    .col-left,
+    .col-right{
+        width: 100%;
+        margin: 0;
+    }
+    
+    .header-section,
+    .main-section,
+    header{
+        padding: 2rem 0rem;
+    }
+
+}
+
+@media(max-width: 700px){
+    .container,
+    .nav_list,
+    .nav{
+        flex-direction: column;
+    }
+    .nav_list{
+        margin-top: 2rem;
+    }
+
+    .nav_item{
+        margin-left:  0;
+    }
+    
+    .nav_item + .nav_item{
+        margin-left: 0rem;
+        margin-top: 2rem;
+    }    
+
+    .nav{
+        display: none;
+        
+        
+    }
+
+    .burger{
+        display: flex;
+    }
+    
+}
+
+@media(min-width: 700px){
+    .nav{
+        display: flex;
+    }
+}
+
+
+
+.nav.active{
+    display: block;
+}
+
+
+
+
